@@ -49,7 +49,7 @@ public class PasswordHelper {
         int scoreCapitalize = 0;
         int scoreLetter = 0;
         int scoreResult = 0;
-        scoreResult += Math.min(3, password.length() / 3);
+        scoreResult += Math.min(2, password.length() / 4);
         Set<Character> uniqueSymbols = new HashSet<>();
         for (int i = 0; i < password.length(); i++) {
             char c = password.charAt(i);
@@ -74,20 +74,13 @@ public class PasswordHelper {
         scoreResult += scoreSymbol > 0 ? Math.min(2, scoreSymbol) : 0;
         scoreResult += (uniqueSymbols.size() - 3) > 0 ? Math.min(2, uniqueSymbols.size() - 3) : 0;
         scoreResult += scoreCapitalize > 0 ? 1 : 0;
+        scoreResult += scoreLetter > 0 ? 1 : 0;
+        scoreResult -= scoreNumber == 0 ? 1 : 0;
+        scoreResult -= scoreSymbol == 0 ? 1 : 0;
+        scoreResult -= scoreCapitalize == 0 ? 1 : 0;
+        scoreResult -= scoreLetter == 0 ? 1 : 0;
+        scoreResult = uniqueSymbols.size() <= 2 ? 1 : scoreResult;
 
-
-        if (scoreNumber == 0) {
-            scoreResult--;
-        }
-        if (scoreSymbol == 0) {
-            scoreResult--;
-        }
-        if (scoreLetter == 0) {
-            scoreResult--;
-        }
-        if (uniqueSymbols.size() <= 2) {
-            scoreResult = 1;
-        }
         return Math.max(1, Math.min(10, scoreResult));
     }
 
