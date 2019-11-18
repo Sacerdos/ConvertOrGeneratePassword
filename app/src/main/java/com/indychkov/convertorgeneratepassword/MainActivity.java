@@ -30,6 +30,7 @@ public class MainActivity extends Activity {
     private TextView sizeDescription;
     private CompoundButton isCapitalize, isNumber, isSymbol;
     private final int MIN_LENGTH = 8;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,8 +53,9 @@ public class MainActivity extends Activity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 resultTextView.setText(helper.convert(s));
                 copyButton.setEnabled(s.length() > 7);
-                quality.setImageLevel(helper.getQuality(s) * 1000);
-                qualityText.setText(getResources().getStringArray(R.array.password_strength)[helper.getQuality(s)]);
+                int qualityRate = helper.getQuality(s.toString());
+                quality.setImageLevel(qualityRate * 1000);
+                qualityText.setText(getResources().getStringArray(R.array.password_strength)[qualityRate]);
             }
 
             @Override
@@ -105,9 +107,9 @@ public class MainActivity extends Activity {
                         getString(R.string.length_format,
                                 progress,
                                 getResources().getQuantityString(R.plurals.symbols_count, progress),
-                                MIN_LENGTH+progress,
-                                getResources().getQuantityString(R.plurals.symbols_count, MIN_LENGTH+progress)
-                                ));
+                                MIN_LENGTH + progress,
+                                getResources().getQuantityString(R.plurals.symbols_count, MIN_LENGTH + progress)
+                        ));
             }
 
             @Override

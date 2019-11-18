@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="basic_layout_padding">16dp</dimen>
+    <dimen name="convert_layout_marginTop">4dp</dimen>
+    <dimen name="result_convert_textview_width">0dp</dimen>
+    <dimen name="result_convert_marginTop">8dp</dimen>
+    <dimen name="image_button_padding">16dp</dimen>
+    <dimen name="image_copy_button_marginTop">4dp</dimen>
+    <dimen name="quality_imageview_height">24dp</dimen>
+    <dimen name="quality_imageview_marginTop">12dp</dimen>
+    <dimen name="edittext_marginTop">16dp</dimen>
+    <dimen name="generate_layout_marginTop">12dp</dimen>
+    <dimen name="generated_text_marginTop">12dp</dimen>
+    <dimen name="generated_text_marginBottom">12dp</dimen>
+    <dimen name="result_generate_textview_width">0dp</dimen>
+    <dimen name="result_generated_marginBottom">12dp</dimen>
+    <dimen name="seekbar_hint_marginTop">4dp</dimen>
+    <dimen name="seekbar_hint_marginBottom">4dp</dimen>
+</resources>

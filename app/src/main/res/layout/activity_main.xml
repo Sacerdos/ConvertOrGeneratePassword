@@ -4,39 +4,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="@dimen/basic_layout_padding"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="@dimen/convert_layout_marginTop"
         android:background="@drawable/result_field_edging"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Перевод пароля с русского на английский"
+            android:text="@string/convert_title"
             android:textAlignment="center"
             android:textAppearance="@style/NameTextAppearance" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="@dimen/convert_layout_marginTop"
             android:background="@drawable/result_field_edging"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/result_textview"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/result_convert_textview_width"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_centerVertical="true"
-                android:layout_marginBottom="12dp"
+                android:layout_marginTop="@dimen/result_convert_marginTop"
                 android:layout_toLeftOf="@id/button_copy"
                 android:maxLines="1"
                 android:singleLine="true"
@@ -48,25 +47,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:padding="16dp"
+                android:layout_marginTop="@dimen/image_copy_button_marginTop"
+                android:padding="@dimen/image_button_padding"
                 android:src="@drawable/ic_content_copy_black_24dp" />
 
             <ImageView
                 android:id="@+id/quality_indicator"
                 android:layout_width="match_parent"
-                android:layout_height="24dp"
+                android:layout_height="@dimen/quality_imageview_height"
                 android:layout_below="@id/result_textview"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="@dimen/quality_imageview_marginTop"
                 android:src="@drawable/quality_indicator" />
 
             <TextView
                 android:id="@+id/quality_descr"
                 android:layout_width="match_parent"
-                android:layout_height="24dp"
+                android:layout_height="@dimen/quality_imageview_height"
                 android:layout_below="@id/result_textview"
-                android:layout_marginTop="36dp"
-                android:layout_marginBottom="4dp"
+                android:layout_marginTop="@dimen/quality_imageview_marginTop"
                 android:gravity="center_horizontal"
                 android:text="@string/start_quality_string" />
         </RelativeLayout>
@@ -74,7 +72,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/edittext_marginTop"
             android:orientation="vertical">
 
             <EditText
@@ -82,7 +80,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/source_field_edging"
-                android:hint="Введите пароль на русском языке"
+                android:hint="@string/edittext_hint"
                 android:textAppearance="@style/HintTextAppearance"
                 tools:text="ЙйЦцУу" />
 
@@ -93,34 +91,34 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/generate_layout_marginTop"
         android:background="@drawable/result_field_edging"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Генератор пароля"
+            android:text="@string/generate_title"
             android:textAlignment="center"
             android:textAppearance="@style/NameTextAppearance" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="12dp"
+            android:layout_marginTop="@dimen/generated_text_marginTop"
+            android:layout_marginBottom="@dimen/generated_text_marginBottom"
             android:background="@drawable/result_field_edging"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/result_generated_textview"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/result_generate_textview_width"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_centerVertical="true"
-                android:layout_marginBottom="12dp"
+                android:layout_marginBottom="@dimen/result_generated_marginBottom"
                 android:layout_toLeftOf="@id/button_copy_generated"
                 android:maxLines="1"
                 android:singleLine="true"
@@ -133,7 +131,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:padding="16dp"
+                android:padding="@dimen/image_button_padding"
                 android:src="@drawable/ic_autorenew_black_24dp" />
         </RelativeLayout>
 
@@ -148,30 +146,34 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/result_textview"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="4dp"
+            android:layout_marginTop="@dimen/seekbar_hint_marginTop"
+            android:layout_marginBottom="@dimen/seekbar_hint_marginBottom"
             android:gravity="center_horizontal"
-            android:text="(установите размер пароля)" />
+            android:text="@string/setsize_hint" />
 
         <CheckBox
             android:id="@+id/is_capitalize"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Заглавные"
+            android:checked="true"
+            android:text="@string/check_capitalized"
             android:textAppearance="@style/CheckedboxTextAppearance" />
 
         <CheckBox
             android:id="@+id/is_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Цифры"
+            android:checked="true"
+            android:text="@string/check_number"
             android:textAppearance="@style/CheckedboxTextAppearance" />
+
 
         <CheckBox
             android:id="@+id/is_symbol"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Специальные символы"
+            android:checked="true"
+            android:text="@string/check_symbol"
             android:textAppearance="@style/CheckedboxTextAppearance" />
 
     </LinearLayout>
