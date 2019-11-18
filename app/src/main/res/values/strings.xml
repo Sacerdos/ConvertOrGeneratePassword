@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">ConvertOrGeneratePassword</string>
     <string name="clipboard_title">Пароль</string>
+    <string name="clipboard_title_generated">Сгенерированный пароль</string>
     <string name="message_copied">Скопировано в буфер обмена</string>
     <string-array name="russian">
         <item>й</item>
@@ -86,4 +87,12 @@
         <item>Очень хороший</item>
         <item>Отличный</item>
     </string-array>
+    <string name="length_format">8 + %1$d %2$s = %3$d %4$s</string>
+    <plurals name="symbols_count">
+        <item quantity="one">символ</item>
+        <item quantity="two">символа</item>
+        <item quantity="few">символа</item>
+        <item quantity="many">символов</item>
+        <item quantity="other">символов</item>
+    </plurals>
 </resources>
