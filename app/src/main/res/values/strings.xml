@@ -88,13 +88,6 @@
         <item>Отличный</item>
     </string-array>
     <string name="length_format">8 + %1$d %2$s = %3$d %4$s</string>
-    <string name="convert_title">Перевод пароля с русского на английский</string>
-    <string name="edittext_hint">Введите пароль на русском языке</string>
-    <string name="generate_title">Генератор пароля</string>
-    <string name="setsize_hint">(установите размер пароля)</string>
-    <string name="check_capitalized">Заглавные</string>
-    <string name="check_number">Цифры</string>
-    <string name="check_symbol">Специальные символы</string>
     <plurals name="symbols_count">
         <item quantity="one">символ</item>
         <item quantity="two">символа</item>
@@ -102,4 +95,11 @@
         <item quantity="many">символов</item>
         <item quantity="other">символов</item>
     </plurals>
+    <string name="convert_title">Перевод пароля с русского на английский</string>
+    <string name="edittext_hint">Введите пароль на русском языке</string>
+    <string name="generate_title">Генератор пароля</string>
+    <string name="setsize_hint">(установите размер пароля)</string>
+    <string name="check_capitalized">Заглавные</string>
+    <string name="check_number">Цифры</string>
+    <string name="check_symbol">Специальные символы</string>
 </resources>
